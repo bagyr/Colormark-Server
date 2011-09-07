@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, abort
 
 app = Flask(__name__)
 
@@ -16,5 +16,5 @@ def procImg(url):
     return jsonify(image=url)
 
 if __name__ == '__main__':
-    app.debug = False 
+    app.debug = True
     app.run(host='0.0.0.0')
