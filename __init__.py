@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/')
 def default():
     """Default route"""
-    return send_static_file('default.html')
+    abort(403)
 
 
 @app.route('/image/<url>', methods=['GET',])
